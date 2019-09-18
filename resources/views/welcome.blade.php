@@ -70,7 +70,7 @@
 									</li>
 									</ul>
 							</li>
-							<li><a href="#"><div>about</div></a>
+							<li><a href="#"><div></div></a>
 								<ul>
 									<li><a href="#"><div><i class="icon-stack"></i>Sliders</div></a>
 										<ul>
