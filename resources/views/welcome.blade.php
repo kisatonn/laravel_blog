@@ -35,6 +35,9 @@
 	  </div>
 	</nav>
 </header>
+<div class="mx-auto" style="width: 200px;">
+  <img src="images/mimina.jpeg" width="100%">
+</div>
 
 <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 	<div class="col-md-6 px-0">
