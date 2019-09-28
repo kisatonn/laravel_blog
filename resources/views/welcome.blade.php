@@ -17,7 +17,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<!--ロゴ -->
-	  <a class="navbar-brand" href=""><img src="images/logo.png" width="100"></a>
+	  <a class="navbar-brand" href=""><img src="images/logo.png" width="200px"></a>
 			<!--画面を小さくした時 -->
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon">
@@ -37,14 +37,6 @@
 </header>
 <div class="mx-auto" style="width: 200px;">
   <img src="images/mimina.jpeg" width="100%">
-</div>
-
-<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-	<div class="col-md-6 px-0">
-		<h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-		<p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-		<p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-	</div>
 </div>
 
 <div class="row mb-2">
