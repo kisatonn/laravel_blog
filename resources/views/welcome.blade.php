@@ -35,9 +35,10 @@
 	  </div>
 	</nav>
 </header>
-<div class="mx-auto" style="width: 200px;">
-  <img src="images/mimina.jpeg" width="100%">
+<div class="pull-left" style="width: 200px;">
+  <img src="images/hometop.JPG" width="450%">
 </div>
+
 
 <div class="row mb-2">
 	<div class="col-md-6">
