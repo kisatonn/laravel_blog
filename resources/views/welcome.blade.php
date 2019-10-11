@@ -10,6 +10,29 @@
 <link href="/css/page.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+	.cooking {
+		background: url(images/cooking.jpg);
+		background-size: cover;
+		padding: 20px;
+	}
+
+	.nutrition {
+		background: url(images/nutrition.jpg);
+		background-size: cover;
+		padding: 20px;
+	}
+
+	.agriculture {
+		background: url(images/agriculture.jpg);
+		background-size: cover;
+		padding: 20px;
+	}
+	.bg-warning{
+		width: 50%;
+		margin: 0 auto;
+	}
+</style>
 </head>
 <body>
 	<!--ヘッダー -->
@@ -36,35 +59,59 @@
 	</nav>
 </header>
 <div　class="container">
-	<div class="text-center">
-	  <img src="images/hometop.jpg" class="img-fluid">
-	</div>
-	<div class="col-8 mx-auto">
-		<div class="categories">
-			<div class="cooking">
-				<h1>料理</h1>
-				<p>旬の食材を使ったレシピをお届けします。</p>
-			</div>
-			<div class="nutrition">
-				<h1>栄養</h1>
-				<p>旬の食べ物には栄養がたくさんあります。</p>
-			</div>
-			<div class="agriculture">
-				<h1>農業</h1>
-				<p>収穫するのは一瞬でも育てるのは様々な苦労があります。</p>
-			</div>
-		</div>
-	</div>
 	<div class="row">
-		<div class="d-none d-md-block col-md-4 mx-auto">
+		  <img src="images/hometop.jpg" class="img-fluid col-lg-9 col-md-12">
+		<div class="d-none d-lg-block col-md-3 mx-auto text-center">
 				<h2>Profile</h2>
 				<img src="images/profile.png"  class="img-fluid" width="20%">
 				<h4>ジュリー</h4>
 				<p>岐阜県在住</p>
-				<p> farmersmarket＆cafe nocca というcafeで働いています。</p>
+				<p>farmersmarket＆cafe nocca というcafeで働いています。</p>
 				<p>cafeのホームページを作っているうちに、コードに興味を持つ。</p>
 				<p>プログラミング歴半年ぐらい。</p>
 		</div>
+	</div>
+	<h2 class="text-center">カテゴリー</h2>
+	<div class="row">
+		<div class="cooking col-lg-4 p-3">
+			<div class="bg-warning">
+				<div class="text-white text-center">
+					<a href="" class="h1 text-white">料理</a>
+					<p>旬の食材を使ったレシピをお届けします。</p>
+				</div>
+			</div>
+		</div>
+		<div class="nutrition col-lg-4 p-3">
+			<div class="bg-warning">
+				<div class="text-white text-center">
+					<a href="" class="h1 text-white">栄養</a>
+					<p>旬の食べ物は栄養がたくさんあります。</p>
+				</div>
+			</div>
+		</div>
+		<div class="agriculture col-lg-4 p-3">
+			<div class="bg-warning">
+				<div class="text-white text-center">
+					<a href="" class="h1 text-white">農業</a>
+					<p>収穫するのは一瞬でもそこに至るまでには様々な物語があります。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-9 col-md-12">
+			<h2 class="text-center">新着記事</h2>
+		</div>
+		<div class=" text-center d-none d-lg-block col-md-3">
+			<h2>ARCHIVE</h2>
+			<ul class="list-unstyled">
+				<li><a href="">2019年10月</a></li>
+				<li><a href="">2019年11月</a></li>
+				<li><a href="">2019年12月</a></li>
+				<li><a href="">2020年01月</a></li>
+				<li><a href="">2020年02月</a></li>
+				<li><a href="">2020年03月</a></li>
+			</ul>
 	</div>
 </div>
 
