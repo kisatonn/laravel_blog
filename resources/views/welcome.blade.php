@@ -28,10 +28,16 @@
 		background-size: cover;
 		padding: 20px;
 	}
-	.bg-warning{
+	.bg-success{
 		width: 50%;
 		margin: 0 auto;
 	}
+	 .archive{
+		 color: #008000;
+		 border-bottom: solid #9ACD32;
+		 display: block;
+		 margin: 5px;
+	 }
 </style>
 </head>
 <body>
@@ -61,36 +67,36 @@
 <div　class="container">
 	<div class="row">
 		  <img src="images/hometop.jpg" class="img-fluid col-lg-9 col-md-12">
-		<div class="d-none d-lg-block col-md-3 mx-auto text-center">
-				<h2>Profile</h2>
-				<img src="images/profile.png"  class="img-fluid" width="20%">
-				<h4>ジュリー</h4>
-				<p>岐阜県在住</p>
+		<div class="d-none d-lg-block col-md-3 mx-auto text-center border border-success">
+				<h2 class="mt-3 bg-success text-white">Profile</h2>
+				<img src="images/profile.png"  class="img-fluid mt-3" width="20%">
+				<h4 class="mt-3">ジュリー</h4>
+				<p class="mt-3">岐阜県在住</p>
 				<p>farmersmarket＆cafe nocca というcafeで働いています。</p>
 				<p>cafeのホームページを作っているうちに、コードに興味を持つ。</p>
 				<p>プログラミング歴半年ぐらい。</p>
 		</div>
 	</div>
-	<h2 class="text-center">カテゴリー</h2>
-	<div class="row">
-		<div class="cooking col-lg-4 p-3">
-			<div class="bg-warning">
+	<h2 class="text-center text-success m-3">カテゴリー</h2>
+	<div class="row mx-auto">
+		<div class="cooking col-lg-3 m-2 border border-success">
+			<div class="bg-success">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">料理</a>
 					<p>旬の食材を使ったレシピをお届けします。</p>
 				</div>
 			</div>
 		</div>
-		<div class="nutrition col-lg-4 p-3">
-			<div class="bg-warning">
+		<div class="nutrition col-lg-3 m-2 border border-success">
+			<div class="bg-success">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">栄養</a>
 					<p>旬の食べ物は栄養がたくさんあります。</p>
 				</div>
 			</div>
 		</div>
-		<div class="agriculture col-lg-4 p-3">
-			<div class="bg-warning">
+		<div class="agriculture col-lg-3 m-2 border border-success">
+			<div class="bg-success">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">農業</a>
 					<p>収穫するのは一瞬でもそこに至るまでには様々な物語があります。</p>
@@ -98,23 +104,22 @@
 			</div>
 		</div>
 	</div>
+	<h2 class="text-center text-success m-3">新着記事</h2>
 	<div class="row">
 		<div class="col-lg-9 col-md-12">
-			<h2 class="text-center">新着記事</h2>
 		</div>
-		<div class=" text-center d-none d-lg-block col-md-3">
-			<h2>ARCHIVE</h2>
+		<div class=" text-center d-none d-lg-block col-md-3 border border-success">
+			<h2 class="mt-3 bg-success text-white">ARCHIVE</h2>
 			<ul class="list-unstyled">
-				<li><a href="">2019年10月</a></li>
-				<li><a href="">2019年11月</a></li>
-				<li><a href="">2019年12月</a></li>
-				<li><a href="">2020年01月</a></li>
-				<li><a href="">2020年02月</a></li>
-				<li><a href="">2020年03月</a></li>
+				<li><a href="" class="archive">2020年03月</a></li>
+				<li><a href="" class="archive">2020年02月</a></li>
+				<li><a href="" class="archive">2020年01月</a></li>
+				<li><a href="" class="archive">2019年12月</a></li>
+				<li><a href="" class="archive">2019年11月</a></li>
+				<li><a href="" class="archive">2019年10月</a></li>
 			</ul>
 	</div>
 </div>
-
 <div class="row mb-2">
 	<div class="col-md-6">
 	</div>
