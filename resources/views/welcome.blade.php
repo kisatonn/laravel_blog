@@ -79,15 +79,15 @@
 	</div>
 	<h2 class="text-center text-success m-3">カテゴリー</h2>
 	<div class="row mx-auto">
-		<div class="cooking col-lg-3 m-2 border border-success">
+		<div class="cooking col-md-3 m-2 border border-success">
 			<div class="bg-success">
 				<div class="text-white text-center">
-					<a href="" class="h1 text-white">料理</a>
+					<a href="blog.blade.php" class="h1 text-white">料理</a>
 					<p>旬の食材を使ったレシピをお届けします。</p>
 				</div>
 			</div>
 		</div>
-		<div class="nutrition col-lg-3 m-2 border border-success">
+		<div class="nutrition col-md-3 m-2 border border-success">
 			<div class="bg-success">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">栄養</a>
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="agriculture col-lg-3 m-2 border border-success">
+		<div class="agriculture col-md-3 m-2 border border-success">
 			<div class="bg-success">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">農業</a>
