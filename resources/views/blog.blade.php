@@ -66,7 +66,7 @@
 		<div class="col-lg-9 col-md-12 m-3">
 			<article>
 				<h4>いちじくと水菜のサラダ</h4>
-				<img src="images/ichigiku.png">
+				<img src="public/images/ichigiku.png" class="img-fluid" alt="Responsive image">
 			</article>
 		</div>
 		<div class="text-center d-none d-lg-block col-md-3 m-3 border border-success">

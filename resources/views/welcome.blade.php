@@ -13,18 +13,21 @@
 <style>
 	.cooking {
 		background: url(images/cooking.jpg);
+		height: 400px;
 		background-size: cover;
 		padding: 20px;
 	}
 
 	.nutrition {
 		background: url(images/nutrition.jpg);
+		height: 400px;
 		background-size: cover;
 		padding: 20px;
 	}
 
 	.agriculture {
 		background: url(images/agriculture.jpg);
+		height: 400px;
 		background-size: cover;
 		padding: 20px;
 	}
@@ -79,27 +82,27 @@
 	</div>
 	<h2 class="text-center text-success m-3">カテゴリー</h2>
 	<div class="row mx-auto">
-		<div class="cooking col-md-3 m-2 border border-success">
-			<div class="bg-success">
+		<div class="cooking col-md-3 m-3 ml-5 border border-success">
+			<div class="bg-success h-60 mt-5">
 				<div class="text-white text-center">
 					<a href="blog.blade.php" class="h1 text-white">料理</a>
-					<p>旬の食材を使ったレシピをお届けします。</p>
+					<p class="mt-5">旬の食材を使ったレシピをお届けします。</p>
 				</div>
 			</div>
 		</div>
-		<div class="nutrition col-md-3 m-2 border border-success">
-			<div class="bg-success">
+		<div class="nutrition col-md-3 m-3 border border-success">
+			<div class="bg-success h-60 mt-5">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">栄養</a>
-					<p>旬の食べ物は栄養がたくさんあります。</p>
+					<p class="mt-5">旬の食べ物は栄養がたくさんあります。</p>
 				</div>
 			</div>
 		</div>
-		<div class="agriculture col-md-3 m-2 border border-success">
-			<div class="bg-success">
+		<div class="agriculture col-md-3 m-3 border border-success">
+			<div class="bg-success h-60 mt-5">
 				<div class="text-white text-center">
 					<a href="" class="h1 text-white">農業</a>
-					<p>収穫するのは一瞬でもそこに至るまでには様々な物語があります。</p>
+					<p class="mt-5">収穫するのは一瞬でもそこに至るまでには様々な物語があります。</p>
 				</div>
 			</div>
 		</div>
