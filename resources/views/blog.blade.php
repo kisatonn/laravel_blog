@@ -25,7 +25,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<!--ロゴ -->
-	  <a class="navbar-brand" href=""><img src="images/logo.png" class="img-fluid" width="200px"></a>
+	  <a class="navbar-brand" href=""><img src="{{ asset('images/logo.png') }}" class="img-fluid" width="200px"></a>
 			<!--画面を小さくした時 -->
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon">
@@ -54,7 +54,7 @@
 		</div>
 		<div class="d-none d-lg-block col-md-3 m-3 mx-auto text-center border border-success">
 				<h2 class="mt-3 bg-success text-white">Profile</h2>
-				<img src="images/profile.png"  class="img-fluid mt-3" width="20%">
+				<img src="{{ asset('images/profile.png') }}"  class="img-fluid mt-3" width="20%">
 				<h4 class="mt-3">ジュリー</h4>
 				<p class="mt-3">岐阜県在住</p>
 				<p>farmersmarket＆cafe nocca というcafeで働いています。</p>
@@ -66,7 +66,7 @@
 		<div class="col-lg-9 col-md-12 m-3">
 			<article>
 				<h4>いちじくと水菜のサラダ</h4>
-				<img src="public/images/ichigiku.png" class="img-fluid" alt="Responsive image">
+				<img src="{{ asset('images/ichigiku.png') }}" class="img-fluid" alt="Responsive image">
 			</article>
 		</div>
 		<div class="text-center d-none d-lg-block col-md-3 m-3 border border-success">
