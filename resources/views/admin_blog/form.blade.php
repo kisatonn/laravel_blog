@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h2>ブログ記事投稿・編集</h2>
-                    
+
             {{--if 文による条件分岐--}}
             @if (session('message'))
                 <div class="alert alert-success">
@@ -42,9 +42,9 @@
             <form method="POST" action="{{ route('admin_post') }}">
                 <div class="form-group">
                     <label>日付</label>
-                            @if (isset($input['post_data']))
-                            <input class="form-control" name="post_date" size="20" value="{{ $input['post_data'] }}" placeholder="日付を入力して下さい。">
-                @else 
+                            @if (isset($input['post_date']))
+                            <input class="form-control" name="post_date" size="20" value="{{ $input['post_date'] }}" placeholder="日付を入力して下さい。">
+                @else
                         <input class="form-control" name="post_date" size="20" value="{{ null }}" placeholder="日付を入力して下さい。">
                             @endif
                         </div>
@@ -53,7 +53,7 @@
                     <label>タイトル</label>
                             @if (isset($input['title']))
                     <input class="form-control" name="title" value="{{ $input['title'] }}" placeholder="タイトルを入力して下さい。">
-                            @else 
+                            @else
                             <input class="form-control" name="title" value="{{ null }}" placeholder="タイトルを入力して下さい。">
                              @endif
                 </div>
@@ -62,7 +62,7 @@
                     <label>本文</label>
                             @if (isset($input['body']))
                     <textarea class="form-control" rows="15" name="body" placeholder="本文を入力してください。">{{ $input['body'] }}</textarea>
-                            @else 
+                            @else
                             <textarea class="form-control" rows="15" name="body" placeholder="本文を入力してください。">{{ null }}</textarea>
                             @endif
                 </div>
@@ -72,8 +72,8 @@
                 {{--CSRFトークンが生成される--}}
                 {{ csrf_field() }}
             </form>
-                   
-           @if ($article_id) 
+
+           @if ($article_id)
              <br>
                 <form action="{{ route('admin_delete') }}" method="POST">
                     <input type="submit" class="btn btn-primary btn-sm" value="削除">

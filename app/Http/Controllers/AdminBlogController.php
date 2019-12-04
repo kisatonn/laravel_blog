@@ -57,12 +57,13 @@ class AdminBlogController extends Controller
     {
         // 入力値の取得
         $input = $request->input();
-        // array_get ヘルパは配列から指定されたキーの値を取り出すメソッド
-        // 指定したキーが存在しない場合のデフォルト値を第三引数に設定できる
-        // 指定したキーが存在しなくても、エラーにならずデフォルト値が返るのが便利
-        $article = $this->article->create($input);
+        $article_id = array_get($input, 'article_id');
+
+        $article = $this->article->updateOrCreate(compact('article_id'), $input);
         // フォーム画面にリダイレクト。その際、route メソッドの第二引数にパラメータを指定できる
-        return redirect()->route('admin_form')->with('message', '記事を保存しました');
+        return redirect()
+            ->route('admin_form', ['article_id' => $article->article_id])
+            ->with('status', '記事を保存しました');
     }
 
 }
