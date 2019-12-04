@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Article extends Model
 {
     // 対象テーブルのプライマリキーのカラム名を指定する。デフォルトは 'id' というカラム名が想定されている。
+    use SoftDeletes;
+
+
     protected $primaryKey = 'article_id';
 
     // 「複数代入」を利用するときに指定する。追加・編集可能なカラム名のみを指定する。

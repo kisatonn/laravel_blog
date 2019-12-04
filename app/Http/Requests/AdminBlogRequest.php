@@ -28,12 +28,21 @@ class AdminBlogRequest extends FormRequest
     {
         // バリデーションルールはここに追加する
         // 項目名 => ルールという形式で、ルールが複数ある場合は '|' で区切る
-        return [
-          'article_id' => 'integer|nullable',              // 整数・null でもOK
-          'post_date'  => 'required|date',                 // 必須・日付
-          'title'      => 'required|string|max:255',       // 必須・文字列・最大値（10000文字まで）
-          'body'       => 'required|string|max:10000',     // 必須・文字列・最大値（10000文字まで）
-      ];
+        $action = $this->getCurrentAction();
+
+        $rules['post'] = [
+            'article_id' => 'integer|nullable',              // 整数・null でもOK
+            'post_date'  => 'required|date',                 // 必須・日付
+            'title'      => 'required|string|max:255',       // 必須・文字列・最大値（255文字まで）
+            'body'       => 'required|string|max:10000',     // 必須・文字列・最大値（10000文字まで）
+        ];
+
+        $rules['delete'] = [
+            'article_id' => 'required|integer'     // 必須・整数
+        ];
+
+        return array_get($rules, $action, []);
+    }
     }
 
     public function messages()
@@ -53,5 +62,13 @@ class AdminBlogRequest extends FormRequest
             'body.string'        => '本文は文字列を入力してください',
             'body.max'           => '本文は:max文字以内で入力してください',
         ];
+    }
+    public function getCurrentAction()
+    {
+        // 実行中のアクション名を取得
+        // App\Http\Controllers\AdminBlogController@post のような返り値が返ってくるので @ で分割
+        $route_action = Route::currentRouteAction();
+        list(, $action) = explode('@', $route_action);
+        return $action;
     }
 }
