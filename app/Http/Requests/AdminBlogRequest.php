@@ -43,7 +43,7 @@ class AdminBlogRequest extends FormRequest
 
         return array_get($rules, $action, []);
     }
-    }
+    
 
     public function messages()
     {

@@ -18,17 +18,7 @@ class AdminBlogController extends Controller
         $this->article = $article;
     }
 
-    public function delete(AdminBlogRequest $request)
-    {
-        // 記事IDの取得
-        $article_id = $request->input('article_id');
 
-        $result = $this->article->destroy($article_id);
-        $message = ($result) ? '記事を削除しました' : '記事の削除に失敗しました。';
-
-        // フォーム画面へリダイレクト
-        return redirect()->route('admin_form')->with('message', $message);
-    }
     public function form(int $article_id = null)
     {
         // メソッドの引数に指定すれば、ルートパラメータを取得できる
@@ -65,5 +55,17 @@ class AdminBlogController extends Controller
             ->route('admin_form', ['article_id' => $article->article_id])
             ->with('status', '記事を保存しました');
     }
+    public function delete(AdminBlogRequest $request)
+    {
+        // 記事IDの取得
+        $article_id = $request->input('article_id');
+
+        $result = $this->article->destroy($article_id);
+        $message = ($result) ? '記事を削除しました' : '記事の削除に失敗しました。';
+
+        // フォーム画面へリダイレクト
+        return redirect()->route('admin_form')->with('message', $message);
+    }
+
 
 }
