@@ -14,6 +14,8 @@ class AdminBlogRequest extends FormRequest
      */
     public function authorize()
     {
+        // ユーザーがこのリクエストの権限を持っているかどうかを判断する
+        // ここではひとまず true にしておく
         return true;
     }
 
@@ -24,22 +26,15 @@ class AdminBlogRequest extends FormRequest
      */
     public function rules()
     {
-        $action = $this->getCurrentAction();
-        $rules['post'] = [
-            'article_id' => 'integer|nullable',              // 整数・null でもOK
-            'post_date'  => 'required|date',                 // 必須・日付
-            'title'      => 'required|string|max:255',       // 必須・文字列・最大値（255文字まで）
-            'body'       => 'required|string|max:10000',     // 必須・文字列・最大値（10000文字まで）
+        // バリデーションルールはここに追加する
+        // 項目名 => ルールという形式で、ルールが複数ある場合は '|' で区切る
+        return [
+            'post_date' => 'required|date',                 // 必須・日付
+            'title'     => 'required|string|max:255',       // 必須・文字列・最大値（255文字まで）
+            'body'      => 'required|string|max:10000',     // 必須・文字列・最大値（10000文字まで）
         ];
-
-        $rules['delete'] = [
-            'article_id' => 'required|integer'     // 必須・整数
-        ];
-
-        return array_get($rules, $action, []);
     }
-    }
-    
+
     public function messages()
     {
         // 表示されるバリデートエラーメッセージを個別に編集したい場合は、ここに追加する
@@ -47,7 +42,6 @@ class AdminBlogRequest extends FormRequest
         // プレースホルダーを使うこともできる
         // 下記の例では :max の部分にそれぞれ設定した値（255, 10000）が入る
         return [
-            'article_id.integer' => '記事IDは整数でなければなりません',
             'post_date.required' => '日付は必須です',
             'post_date.date'     => '日付は日付形式で入力してください',
             'title.required'     => 'タイトルは必須です',
@@ -58,12 +52,4 @@ class AdminBlogRequest extends FormRequest
             'body.max'           => '本文は:max文字以内で入力してください',
         ];
     }
-        public function getCurrentAction()
-            {
-                // 実行中のアクション名を取得
-                // App\Http\Controllers\AdminBlogController@post のような返り値が返ってくるので @ で分割
-                $route_action = Route::currentRouteAction();
-                list(, $action) = explode('@', $route_action);
-                return $action;
-        }
 }

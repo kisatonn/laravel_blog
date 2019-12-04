@@ -17,12 +17,12 @@ class AdminBlogController extends Controller
         // インスタンスが生成される（コンストラクターインジェクション）
         $this->article = $article;
     }
-    
+
     public function delete(AdminBlogRequest $request)
     {
         // 記事IDの取得
         $article_id = $request->input('article_id');
-        
+
         $result = $this->article->destroy($article_id);
         $message = ($result) ? '記事を削除しました' : '記事の削除に失敗しました。';
 
@@ -60,15 +60,9 @@ class AdminBlogController extends Controller
         // array_get ヘルパは配列から指定されたキーの値を取り出すメソッド
         // 指定したキーが存在しない場合のデフォルト値を第三引数に設定できる
         // 指定したキーが存在しなくても、エラーにならずデフォルト値が返るのが便利
-        $article_id = array_get($input, 'article_id');
-        // Eloquent モデルから利用できる updateOrCreate メソッドは、第一引数の値でDBを検索し
-        // レコードが見つかったら第二引数の値でそのレコードを更新、見つからなかったら新規作成します
-        // ここでは article_id でレコードを検索し、第二引数の入力値でレコードを更新、または新規作成しています
-        $article = $this->article->updateOrCreate(compact('article_id'), $input);
+        $article = $this->article->create($input);
         // フォーム画面にリダイレクト。その際、route メソッドの第二引数にパラメータを指定できる
-        return redirect()
-            ->route('admin_form', ['article_id' => $article->article_id])
-            ->with('message', '記事を保存しました');
+        return redirect()->route('admin_form')->with('message', '記事を保存しました');
     }
-    
+
 }
