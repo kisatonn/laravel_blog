@@ -64,7 +64,12 @@ class AdminBlogController extends Controller
         $message = ($result) ? '記事を削除しました' : '記事の削除に失敗しました。';
 
         // フォーム画面へリダイレクト
-        return redirect()->route('admin_form')->with('message', $message);
+        return redirect()->route('admin_list')->with('message', $message);
+    }
+    public function list()
+    {
+        $list = $this->article->getArticleList(10);
+        return view('admin_blog.list', compact('list'));
     }
 
 
