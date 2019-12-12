@@ -5,17 +5,17 @@
     <div class="col-md-8 col-md-offset-1">
         {{--forelse ディレクティブを使うと、データがあるときはループし、無いときは @empty 以下を実行する--}}
         @forelse($list as $article)
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card">
+                <div class="card-header">
                     {{--post_date はモデルクラスで $dates プロパティに指定してあるので、自動的に Carbon インスタンスにキャストされる--}}
-                    <h3 class="panel-title">{{ $article->post_date->format('Y/m/d(D)') }}　{{ $article->title }}</h3>
+                    <h3 class="card-title">{{ $article->post_date->format('Y/m/d(D)') }}　{{ $article->title }}</h3>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                     {{--nl2br 関数で改行文字を <br> に変換する。これをエスケープせずに表示させるため {!! !!} で囲む--}}
                     {{--ただし、このまま出力するととても危険なので e メソッドで htmlspecialchars 関数を通しておく--}}
                     {!! nl2br(e($article->body)) !!}
                 </div>
-                <div class="panel-footer text-right">
+                <div class="card-footer text-right">
                     {{--updated_at も同様に自動的に Carbon インスタンスにキャストされる--}}
                     {{ $article->updated_at->format('Y/m/d H:i:s') }}
                 </div>

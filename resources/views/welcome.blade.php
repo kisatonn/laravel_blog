@@ -61,7 +61,20 @@
 	        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
 	      </li>
 				<li class="nav-item active">
-	        <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
+					<div class="dropdown">
+					  <button type="button" id="dropdown1"
+					      class="btn btn-default dropdown-toggle"
+					      data-toggle="dropdown"
+					      aria-haspopup="true"
+					      aria-expanded="false">
+					    Blog
+					  </button>
+					  <div class="dropdown-menu" aria-labelledby="dropdown1">
+					    <a class="dropdown-item" href="#">料理</a>
+					    <a class="dropdown-item" href="#">栄養</a>
+					    <a class="dropdown-item" href="#">農業</a>
+					  </div>
+					</div>
 	      </li>
 	    </ul>
 	  </div>

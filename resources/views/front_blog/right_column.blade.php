@@ -1,10 +1,10 @@
 {{--右カラム--}}
 <div class="col-md-2">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title">月別アーカイブ</h3>
+    <div class="card card-default">
+        <div class="card-heading">
+            <h3 class="card-title">月別アーカイブ</h3>
         </div>
-        <div class="panel-body">
+        <div class="card-body">
             <ul class="monthly_archive">
                 @forelse($month_list as $value)
                     <li>
