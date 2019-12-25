@@ -68,6 +68,43 @@
 				<h4>いちじくと水菜のサラダ</h4>
 				<img src="{{ asset('images/ichigiku.png') }}" class="img-fluid" alt="Responsive image">
 			</article>
+			@if (count($list) > 0)
+					<br>
+
+					{{--links メソッドでページングが生成される。しかも生成されるHTMLは Bootstrap と互換性がある--}}
+					{{ $list->links() }}
+					<table class="table table-striped">
+							<tr>
+									<th width="120px">記事番号</th>
+									<th width="120px">日付</th>
+									<th>タイトル</th>
+							</tr>
+
+							{{--このまま foreach ループにかけることができる--}}
+							@foreach ($list as $article)
+									<tr>
+											<td>{{ $article->article_id }}</td>
+											<td>{{ $article->post_date_text }}</td>
+											<td>
+													<a href="{{ route('admin_form', ['article_id' => $article->article_id]) }}">
+															{{ $article->title }}
+													</a>
+											</td>
+									</tr>
+							@endforeach
+					</table>
+			@else
+					<br>
+					<p>記事がありません。</p>
+			@endif
+
+
+
+
+
+
+
+
 		</div>
 		<div class="text-center d-none d-lg-block col-md-3 m-3 border border-success">
 			<h2 class="mt-3 bg-success text-white">ARCHIVE</h2>

@@ -14,9 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('blog/', function () {
-    return view('blog');
-});
+
+Route::get('blog/', 'BlogController@list')->name('blog_list');
+
 
 Route::prefix('admin')->group(function() {
     Route::get('form/{article_id?}', 'AdminBlogController@form')->name('admin_form');
